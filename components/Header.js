@@ -3,7 +3,7 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import IonIcons from "react-native-vector-icons/Ionicons";
 
-const Header = () => {
+const Header = ({ title }) => {
 	return (
 		<View style={styles.header}>
 			<TouchableOpacity>

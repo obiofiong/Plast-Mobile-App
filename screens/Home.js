@@ -1,16 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import DailyFacts from "../components/DailyFacts";
 import Header from "../components/Header";
 import ProfileDetails from "../components/ProfileDetails/ProfileDetails";
 
-const Home = () => {
+const Home = ({ navigation }) => {
 	return (
 		<View style={styles.home}>
 			<Header />
-			<ProfileDetails />
-			<DailyFacts />
-			<Text>This is the Home screen</Text>
+			<ScrollView>
+				<ProfileDetails />
+				<DailyFacts />
+				<Text>More content coming soon...</Text>
+			</ScrollView>
 		</View>
 	);
 };

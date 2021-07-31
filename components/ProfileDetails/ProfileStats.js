@@ -1,10 +1,10 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const ProfileStats = () => {
 	return (
 		<View style={styles.profileStatsContainer}>
-			<View style={styles.profileStat}>
+			<TouchableOpacity style={styles.profileStat}>
 				<View style={styles.profileStatHead}>
 					<Text style={styles.profileStatTitle}>Profile Complete</Text>
 					<Text style={styles.profileStatPercent}>30%</Text>
@@ -12,8 +12,8 @@ const ProfileStats = () => {
 				<View style={styles.profileStatBar}>
 					<View style={styles.profileStatBarFill}></View>
 				</View>
-			</View>
-			<View style={styles.profileStat}>
+			</TouchableOpacity>
+			<TouchableOpacity style={styles.profileStat}>
 				<View style={styles.profileStatHead}>
 					<Text style={styles.profileStatTitle}>Daily Experience</Text>
 					<Text style={styles.profileStatPercent}>30%</Text>
@@ -21,7 +21,7 @@ const ProfileStats = () => {
 				<View style={styles.profileStatBar}>
 					<View style={styles.profileStatBarFill}></View>
 				</View>
-			</View>
+			</TouchableOpacity>
 		</View>
 	);
 };

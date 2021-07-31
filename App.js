@@ -12,6 +12,7 @@ import DailyExperienceScreen from "./screens/DailyExperience";
 import MySpaceScreen from "./screens/MySpace";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import tabBarIcons from "./util/TabBarIcons";
+import RootStackScreen from "./screens/RootStackScreen";
 
 export default function App() {
 	const Tab = createBottomTabNavigator();
@@ -19,18 +20,9 @@ export default function App() {
 
 	return (
 		<NavigationContainer style={styles.container}>
-			{/* <MainStack.Navigator initialRouteName="Home">
-				<MainStack.Screen name="Home" component={HomeScreen} />
-				<MainStack.Screen name="Feed" component={FeedScreen} />
-				<MainStack.Screen
-					name="DailyExperience"
-					component={DailyExperienceScreen}
-				/>
-				<MainStack.Screen name="MyImpact" component={MyImpactScreen} />
-				<MainStack.Screen name="MySpace" component={MySpaceScreen} />
-			</MainStack.Navigator> */}
+			<RootStackScreen />
 
-			<Tab.Navigator
+			{/* <Tab.Navigator
 				initialRouteName="Home"
 				screenOptions={({ route }) => ({
 					tabBarIcon: ({ focused, color, size }) => {
@@ -73,7 +65,7 @@ export default function App() {
 				<Tab.Screen name="Home" component={HomeScreen} />
 				<Tab.Screen name="MyImpact" component={MyImpactScreen} />
 				<Tab.Screen name="MySpace" component={MySpaceScreen} />
-			</Tab.Navigator>
+			</Tab.Navigator> */}
 		</NavigationContainer>
 	);
 }

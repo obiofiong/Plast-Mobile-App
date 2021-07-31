@@ -1,14 +1,18 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import ProfileStats from "./ProfileStats";
 
 const ProfileDetails = () => {
 	return (
 		<View style={styles.profileDetailsContainer}>
 			<View style={styles.profileAvatarContainer}>
-				<View style={styles.profileImageCircle}>
-					<View style={styles.profileImage}></View>
-				</View>
+				<TouchableOpacity activeOpacity={0.7} style={styles.profileImageCircle}>
+					<Image
+						style={styles.profileImage}
+						source={require("../../util/profile.jpg")}
+					/>
+					{/* <View style={}></View> */}
+				</TouchableOpacity>
 				<View style={styles.profileTextContainer}>
 					<Text>Hello</Text>
 					<Text style={styles.profileTextName}>John</Text>
@@ -45,7 +49,7 @@ const styles = StyleSheet.create({
 		width: 70,
 		height: 70,
 		borderRadius: 70 / 2,
-		backgroundColor: "#DFC9C9",
+		// backgroundColor: "#DFC9C9",
 		// borderWidth: 5,
 	},
 	profileTextContainer: {
